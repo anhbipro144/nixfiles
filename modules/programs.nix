@@ -1,10 +1,13 @@
+{ config, lib, pkgs, ... }:
 
 {
   # home-manager metadata
   # targets.genericLinux.enable = true;
 
   # make zsh your shell and load your dotfile
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+  };
   home.file.".zshrc".source = ../dotfiles/.zshrc;
 
   # git config
@@ -15,7 +18,7 @@
   };
 
   programs.neovim = { enable = true; };
-  home.file.".config/nvim"= {
+  home.file.".config/nvim" = {
     source = ../nvim;
     recursive = true;
   };

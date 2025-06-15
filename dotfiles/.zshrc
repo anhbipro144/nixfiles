@@ -4,6 +4,9 @@
         https://github.com/marlonrichert/zsh-snap.git ~/repos/znap
 source ~/repos/znap/znap.zsh 
 
+      if [ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
+        source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+      fi
 
 # Env
 #export XDG_CONFIG_HOME=/home/neo/.config/nvim
