@@ -1,23 +1,25 @@
-{pkgs, ...}:
 
 {
+  # home-manager metadata
+  # targets.genericLinux.enable = true;
 
-  # Enable Home Manager
-  programs.home-manager = {
-    enable = true; # enables Home Manager
+  # make zsh your shell and load your dotfile
+  programs.zsh.enable = true;
+  home.file.".zshrc".source = ../dotfiles/.zshrc;
+
+  # git config
+  programs.git = {
+    enable = true;
+    userName = "Neo";
+    userEmail = "nbi6731@gmail.com";
   };
 
-  # Enable Git
-  programs.git = { enable = true; };
-
-  # Enable Zsh and Oh My Zsh
-  programs.zsh = { enable = true; };
-
-  home.file.".zshrc" = { source = ../dotfiles/.zshrc; };
+  programs.neovim = { enable = true; };
+  home.file.".config/nvim"= {
+    source = ./nvim;
+    recursive = true;
+  };
 
   # wezterm
-  programs.wezterm = { enable = true; };
-
-
-
+  programs.wezterm.enable = true;
 }
