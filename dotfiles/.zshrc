@@ -147,6 +147,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias n="nvim"
 alias nv="nvim"
+alias nvv="nvim"
 
 
 #Nix
