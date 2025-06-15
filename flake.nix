@@ -25,8 +25,7 @@
 
           extraSpecialArgs = { inherit zenBrowser; };
 
-          modules =
-            [ ./home.nix ./modules/packages.nix ./modules/programs.nix ];
+          modules = [ ./home.nix ];
         };
       };
     };
