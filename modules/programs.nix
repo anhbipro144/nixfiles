@@ -12,7 +12,8 @@
   };
 
   home.file.".zshrc".source = ../dotfiles/.zshrc;
-  # git confi
+
+  # git config
   programs.git = {
     enable = true;
     userName = "Neo";
@@ -25,6 +26,8 @@
     recursive = true;
   };
 
+  #Zoxide
+  programs.zoxide = { enable = true; };
 
   # wezterm
   programs.home-manager.enable = true;

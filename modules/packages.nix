@@ -9,5 +9,6 @@
     wezterm
     zenBrowser
     macchina
+    eza
   ];
 }
