@@ -10,7 +10,7 @@
     zenBrowser
     macchina
     eza
-    make
+    gnumake
     gcc
   ];
 }
