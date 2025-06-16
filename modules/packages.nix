@@ -1,6 +1,13 @@
 { pkgs, zenBrowser, ... }:
 
 {
-  home.packages = with pkgs; [ delta rustc cargo git wezterm zenBrowser zsh ];
-
+  home.packages = with pkgs; [
+    delta
+    rustc
+    cargo
+    git
+    wezterm
+    zenBrowser
+    macchina
+  ];
 }

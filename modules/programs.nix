@@ -2,15 +2,17 @@
 
 {
   # home-manager metadata
-  # targets.genericLinux.enable = true;
+  targets.genericLinux.enable = true;
 
   # make zsh your shell and load your dotfile
   programs.zsh = {
     enable = true;
+    # syntaxHighlighting.enable = true;
+    # shellAliases = { gsa = "git status"; };
   };
-  home.file.".zshrc".source = ../dotfiles/.zshrc;
 
-  # git config
+  home.file.".zshrc".source = ../dotfiles/.zshrc;
+  # git confi
   programs.git = {
     enable = true;
     userName = "Neo";
@@ -23,6 +25,7 @@
     recursive = true;
   };
 
+
   # wezterm
-  programs.wezterm.enable = true;
+  programs.home-manager.enable = true;
 }

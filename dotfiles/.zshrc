@@ -4,10 +4,6 @@
         https://github.com/marlonrichert/zsh-snap.git ~/repos/znap
 source ~/repos/znap/znap.zsh 
 
-      if [ -f "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
-        source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
-      fi
-
 # Env
 #export XDG_CONFIG_HOME=/home/neo/.config/nvim
 export PNPM_HOME=/home/neo/.local/share/pnpm
@@ -21,12 +17,6 @@ export NVM_COMPLETION=true
 export NVM_AUTO_USE=true
 export LLM_MODEL="o4-mini"
 export DIRENV_LOG_FORMAT=""
-
-
-# Nix daemon (multi-user install)
-# if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-#   . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-# fi
 
 # --- Completion Initialization (PLACE AT VERY TOP) ---
 autoload -Uz compinit
@@ -62,9 +52,6 @@ znap source jeffreytse/zsh-vi-mode
 
 
 # Config for ctrl+n & ctrl+p in insert mode
-# in your ~/.zshrc, after loading zsh-vi-mode plugin
-# zvm_after_init_commands+=('_comp_options+=(globdots)')
-# zvm_after_init_commands+=('zmodload -i zsh/complist')
 zvm_after_init_commands+=('bindkey -M viins "^N" menu-select')
 zvm_after_init_commands+=('bindkey -M viins "^P" menu-select')
 
@@ -72,13 +59,6 @@ zvm_after_init_commands+=('bindkey -M viins "^P" menu-select')
 # Github issue : https://github.com/marlonrichert/zsh-autocomplete/issues/761
 # setopt interactivecomments
 
-
-
-# autoload -Uz compinit
-# # zmodload -i zsh/complist        # load menu-select support
-# compinit
-# # _comp_options+=(globdots)       # include dotfiles in completion matches
-# zmodload -i zsh/complist     # enable menu-select
 
 
 # Initialize 
@@ -147,12 +127,10 @@ alias vim="nvim"
 alias vi="nvim"
 alias n="nvim"
 alias nv="nvim"
-alias nvv="nvim"
 
 
 #Nix
 alias hms='nix run home-manager#home-manager -- switch --flake /home/neo/testflake#neo'
-
 
 
 # Shine-wa
@@ -183,5 +161,5 @@ esac
 
 
 # Run fetch
-# macchina
+macchina
 
