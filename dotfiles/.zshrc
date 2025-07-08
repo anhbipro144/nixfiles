@@ -130,7 +130,7 @@ alias nv="nvim"
 
 
 #Nix
-alias hms='nix run home-manager#home-manager -- switch --flake /home/neo/testflake#neo'
+alias hms='nix run home-manager#home-manager -- switch --flake /home/neo/nixfiles#neo'
 
 
 # Shine-wa
